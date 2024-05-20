@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mystressor
+spec:
+  containers:
+    - name: my-stressor-container
+      image: cdami/stressor
+      command: ["sleep"]
+      args: ["3600"]
+      resources:
+        limits:
+          memory: "100Mi"
+
